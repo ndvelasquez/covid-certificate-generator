@@ -10,7 +10,7 @@
     @endif
 
     <div class="grid md:grid-cols-6 gap-4">
-        <form id="myForm" action="{{ route('users.pdf') }}" method="POST">
+        <form id="myForm" action="{{ route('bspReports.pdf') }}" method="POST">
         @csrf
         <p class="block font-medium text-sm text-gray-700">Tipo de prueba:</p>
         <input type="radio" id="rapid" name="testType" value="Serologica">
@@ -45,7 +45,7 @@
         <input type="radio" id="positive" name="result" value="Positivo">
         <label for="positive">Positivo</label>
 
-        <input type="submit" class="border-2 cursor-pointer text-white bg-green-500 hover:bg-green-700 rounded-md my-2 py-2 px-4" value="Generar">
+        <input type="submit" class="border-2 cursor-pointer text-white bg-green-500 hover:bg-green-700 rounded-md my-2 py-2 px-4" value="Generar" onclick="setTimeout(resetForm, 20000)">
         </form>
     </div>
 @endsection

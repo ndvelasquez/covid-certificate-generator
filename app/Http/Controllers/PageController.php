@@ -11,9 +11,9 @@ class PageController extends Controller
         return view('welcome');
     }
 
-    public function novaderm ()
+    public function dermanova ()
     {
-        return view('novadermReport');
+        return view('dermanovaReport');
     }
 
     public function medical ()
