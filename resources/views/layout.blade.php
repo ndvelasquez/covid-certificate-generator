@@ -10,7 +10,7 @@
         <title>Generador de reportes de covid</title>
 
     </head>
-    <body class="p-4 max-w-7xl mx-auto sm:px-6 lg:px-8 bg-gray-200">
+    <body class="p-4 max-w-7xl mx-auto sm:px-6 lg:px-8 bg-cover" style="background-image: url({{ asset('/images/form-background.jpg') }})">
         <h1 class="text-lg font-bold">Generar reporte de resultados de la prueba de COVID-19</h1>
         @yield('content')
     </body>
