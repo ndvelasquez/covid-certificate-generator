@@ -27,6 +27,17 @@
                 document.getElementById('passportInput').style.display='none';
             }
         }
+
+
+        function findUser(dni) {
+            fetch('https://dniruc.apisperu.com/api/v1/dni/' + dni.value + '?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJlbWFpbCI6Im5kdmVsYXNxdWV6bEBnbWFpbC5jb20ifQ.XBZTxJdjUtMXsHe9Tu1p0KuCqtWPiX66_72suDg9koQ')
+            .then(res => res.json())
+            .then(data => {
+                document.getElementById('name').value = data['nombres'];
+                document.getElementById('lastname').value = data['apellidoPaterno'] + ' ' + data['apellidoMaterno'];
+            });
+        }
+
         function resetForm()
         {
             document.getElementById('myForm').reset();

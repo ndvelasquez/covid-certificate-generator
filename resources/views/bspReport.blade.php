@@ -20,13 +20,13 @@
         <input type="checkbox" onchange="ActiveTravelInput(this)" class="form-input rounded-md" name="traveling" id="traveling" value="travel">
         <label for="traveling" class="text-sm font-medium text-gray-700">Muestra para viaje</label>
         <label class="block font-medium text-sm text-gray-700" for="dni">Documento de identidad:</label>
-        <input class="form-input w-full rounded-md shadow-sm" type="text" name="dni" required>
+        <input class="form-input w-full rounded-md shadow-sm" onchange="findUser(this)" id="dni" type="text" name="dni" required>
         <label class="block font-medium text-sm text-gray-700" id="passportLabel" style="display: none" for="passport">Pasaporte:</label>
         <input class="form-input w-full rounded-md shadow-sm" id="passportInput" style="display: none" type="text" name="passport">
         <label class="block font-medium text-sm text-gray-700" for="name">Nombre(s):</label>
-        <input class="form-input w-full rounded-md shadow-sm" type="text" name="name" required>
+        <input class="form-input w-full rounded-md shadow-sm" id="name" type="text" name="name" required>
         <label class="block font-medium text-sm text-gray-700" for="lastname">Apellido(s):</label>
-        <input class="form-input w-full rounded-md shadow-sm" type="text" name="lastname" required>
+        <input class="form-input w-full rounded-md shadow-sm" id="lastname" type="text" name="lastname" required>
         <p class="block font-medium text-sm text-gray-700">Sexo:</p>
         <input type="radio" id="male" name="gender" value="Masculino">
         <label for="male">Masculino</label>
