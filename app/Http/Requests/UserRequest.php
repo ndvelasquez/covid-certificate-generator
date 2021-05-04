@@ -26,7 +26,7 @@ class UserRequest extends FormRequest
         return [
             'name' => 'required',
             'lastname' => 'required',
-            'dni' => 'required|numeric',
+            'dni' => 'required',
             'passport' => 'nullable',
             'age' => 'required',
             'gender' => 'required',

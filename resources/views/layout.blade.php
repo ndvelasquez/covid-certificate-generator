@@ -41,6 +41,8 @@
         function resetForm()
         {
             document.getElementById('myForm').reset();
+            document.getElementById('passportLabel').style.display='none';
+            document.getElementById('passportInput').style.display='none';
         }
     </script>
 </html>
