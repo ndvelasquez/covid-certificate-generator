@@ -21,13 +21,23 @@
             if(checkbox.checked) {
                 document.getElementById('passportLabel').removeAttribute('style');
                 document.getElementById('passportInput').removeAttribute('style');
+                document.getElementById('passportInput').setAttribute('required', 'required');
             }
             else {
                 document.getElementById('passportLabel').style.display='none';
                 document.getElementById('passportInput').style.display='none';
+                document.getElementById('passportInput').removeAttribute('required');
             }
         }
 
+        function checkDocumentSelectedIsPassport(passport) {
+            if (passport.value == 'PASAPORTE') {
+                document.getElementById('traveling').setAttribute('disabled', 'disabled')
+            }
+            else {
+                document.getElementById('traveling').removeAttribute('disabled')
+            }
+        }
 
         function findUser(dni) {
             fetch('https://dniruc.apisperu.com/api/v1/dni/' + dni.value + '?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJlbWFpbCI6Im5kdmVsYXNxdWV6bEBnbWFpbC5jb20ifQ.XBZTxJdjUtMXsHe9Tu1p0KuCqtWPiX66_72suDg9koQ')

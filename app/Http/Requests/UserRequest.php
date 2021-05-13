@@ -28,10 +28,12 @@ class UserRequest extends FormRequest
             'lastname' => 'required',
             'dni' => 'required',
             'passport' => 'nullable',
-            'age' => 'required',
+            'birthDate' => 'required',
             'gender' => 'required',
             'reference' => 'required',
-            'result' => 'required'
+            'result' => 'required',
+            'testHour' => 'required',
+            'docType' => 'required'
         ];
     }
 }

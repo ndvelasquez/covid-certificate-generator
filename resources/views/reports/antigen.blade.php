@@ -46,7 +46,7 @@
                 </tr>
                 <tr>
                     <td class="border text-sm">
-                        DNI Pac:<br>
+                        {{ $user['docType'] }} Pac:<br>
                         {{ $user['dni'] }}
                         @if ($user['passport'] != null)
                             <br>Pasaporte:<br>
@@ -55,8 +55,14 @@
                     </td>
                     <td class="border text-sm">Ref: {{ $user['reference'] }}</td>
                     <td class="border text-sm">Sexo: {{ $user['gender'] }}</td>
-                    <td class="border text-sm">Edad: {{ $user['age'] }}</td>
-                    <td class="border text-sm">Aprobado: {{ date("d/m/Y") }}</td>
+                    <td class="border text-sm">
+                        Edad: {{ $user['age'] }} <br>
+                        Fec. Nacimiento: {{ $user['birthDate'] }}
+                    </td>
+                    <td class="border text-sm">
+                        Aprobado: {{ date("d/m/Y") }} <br>
+                        Hora Prueba: {{ $user['testHour'] }}
+                    </td>
                 </tr>
             </table>
             <table class="table w-full my-2">
