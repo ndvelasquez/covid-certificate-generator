@@ -46,6 +46,8 @@
         <label for="home">Domicilio</label>
         <input type="radio" id="corporate" name="reference" value="Corporativo">
         <label for="corporate">Corporativo</label>
+        <label class="block font-medium text-sm text-gray-700" for="testDate">Fecha de la prueba:</label>
+        <input class="form-input w-full rounded-md shadow-sm" id="testDate" type="date" name="testDate" required>
         <label class="block font-medium text-sm text-gray-700" for="testHour">Hora de la prueba:</label>
         <input class="form-input w-full rounded-md shadow-sm" id="testHour" type="time" name="testHour" required>
         <p class="block font-medium text-sm text-gray-700">Resultado de la prueba:</p>
