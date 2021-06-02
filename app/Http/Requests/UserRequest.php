@@ -33,6 +33,7 @@ class UserRequest extends FormRequest
             'reference' => 'required',
             'result' => 'required',
             'testHour' => 'required',
+            'testDate' => 'required',
             'docType' => 'required'
         ];
     }
