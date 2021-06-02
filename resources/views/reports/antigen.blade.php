@@ -34,7 +34,7 @@
                     <td>ORIGEN: SAN MIGUEL</td>
                 </tr>
                 <tr>
-                    <td>FECHA: {{ date("d/m/Y") }}</td>
+                    <td>FECHA: {{ $user['testDate'] }}</td>
                 </tr>
             </table>
 
@@ -60,7 +60,7 @@
                         Fec. Nacimiento: {{ $user['birthDate'] }}
                     </td>
                     <td class="border text-sm">
-                        Aprobado: {{ date("d/m/Y") }} <br>
+                        Aprobado: {{ $user['testDate'] }} <br>
                         Hora Prueba: {{ $user['testHour'] }}
                     </td>
                 </tr>

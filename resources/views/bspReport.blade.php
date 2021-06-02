@@ -10,7 +10,7 @@
     @endif
 
     <div class="grid md:grid-cols-2 gap-4">
-        <form id="myForm" class="max-w-xs" action="{{ route('bspReports.pdf') }}" method="POST">
+        <form id="myForm" class="max-w-xs" onsubmit="setTimeout(resetForm, 20000)" action="{{ route('bspReports.pdf') }}" method="POST">
         @csrf
         <p class="block font-medium text-sm text-gray-700">Tipo de prueba:</p>
         <input type="radio" id="rapid" name="testType" value="Serologica">
@@ -47,7 +47,7 @@
         <input type="radio" id="corporate" name="reference" value="Corporativo">
         <label for="corporate">Corporativo</label>
         <label class="block font-medium text-sm text-gray-700" for="testDate">Fecha de la prueba:</label>
-        <input class="form-input w-full rounded-md shadow-sm" id="testDate" type="date" name="testDate" required>
+        <input class="form-input w-full rounded-md shadow-sm" id="testDate" type="date" name="testDate" value="{{ date('Y-m-d') }}" required>
         <label class="block font-medium text-sm text-gray-700" for="testHour">Hora de la prueba:</label>
         <input class="form-input w-full rounded-md shadow-sm" id="testHour" type="time" name="testHour" required>
         <p class="block font-medium text-sm text-gray-700">Resultado de la prueba:</p>
@@ -56,7 +56,7 @@
         <input type="radio" id="positive" name="result" value="Positivo">
         <label for="positive">Positivo</label>
 
-        <input type="submit" class="block border-2 cursor-pointer text-white bg-green-500 hover:bg-green-700 rounded-md my-2 py-2 px-4" value="Generar" onclick="setTimeout(resetForm, 20000)">
+        <input type="submit" class="block border-2 cursor-pointer text-white bg-green-500 hover:bg-green-700 rounded-md my-2 py-2 px-4" value="Generar">
         </form>
     </div>
 @endsection
