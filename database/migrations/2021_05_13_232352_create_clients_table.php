@@ -22,6 +22,7 @@ class CreateClientsTable extends Migration
             $table->date('born_date');
             $table->tinyInteger('age');
             $table->enum('gender', ['masculino', 'femenino']);
+            $table->string('phone');
             $table->timestamps();
         });
     }

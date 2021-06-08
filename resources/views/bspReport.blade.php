@@ -1,6 +1,7 @@
 @extends('layout')
 
 @section('content')
+<h1 class="text-lg font-bold">Generar reporte de resultados de la prueba de COVID-19</h1>
     @if ($errors->any())
     <ul class="list-none bg-red-100 text-red-500 p-4 mb-4">
         @foreach ($errors->all() as $error)
