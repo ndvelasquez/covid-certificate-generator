@@ -2,9 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\ClientRequest;
 use App\Models\Client;
 use DateTime;
-use Illuminate\Http\Request;
 
 class ClientController extends Controller
 {
@@ -20,16 +20,16 @@ class ClientController extends Controller
         return view('clients.create');
     }
 
-    public function store(Request $request)
+    public function store(ClientRequest $request)
     {
-        $client = $request->all();
+        $client = $request->validated();
         /*Calculo la edad y la modifico en el objeto*/
-        $birthDate = new DateTime($request->birthDate);
+        $bornDate = new DateTime($request->born_date);
         $today = new DateTime();
-        $age = $today->diff($birthDate);
+        $age = $today->diff($bornDate);
         $client['age'] = $age->y;
         /*Fin de calculo de edad */
-        dd($client);
+        // dd($client);
         Client::create($client);
 
         return redirect()->route('clients.index');
@@ -45,9 +45,9 @@ class ClientController extends Controller
         return view('clients.edit', compact('client'));
     }
 
-    public function update(Request $request, Client $client)
+    public function update(ClientRequest $request, Client $client)
     {
-        $client->update($request->all());
+        $client->update($request->validated());
 
         return redirect()->route('clients.index');
     }

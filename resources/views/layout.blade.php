@@ -38,7 +38,7 @@
     
                 <a href="{{ route('clients.index') }}" class="text-gray-300 hover:text-gray-700 px-3 py-2 rounded-md text-sm font-medium">Clientes</a>
     
-                <a href="#" class="text-gray-300 hover:text-gray-700 px-3 py-2 rounded-md text-sm font-medium">Pruebas</a>
+                <a href="#" class="text-gray-300 hover:text-gray-700 px-3 py-2 rounded-md text-sm font-medium">Certificados</a>
 
                 </div>
             </div>
@@ -56,7 +56,7 @@
         
                 <a href="{{ route('clients.index') }}" class="text-gray-300 hover:text-gray-700 px-3 py-2 rounded-md text-sm font-medium">Clientes</a>
         
-                <a href="#" class="text-gray-300 hover:text-gray-700 px-3 py-2 rounded-md text-sm font-medium">Pruebas</a>
+                <a href="#" class="text-gray-300 hover:text-gray-700 px-3 py-2 rounded-md text-sm font-medium">Certificados</a>
 
             </div>
         </div>

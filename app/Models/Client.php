@@ -29,4 +29,14 @@ class Client extends Model
     {
         return "{$this->first_name} {$this->last_name}";
     }
+
+    public function setFirstNameAttribute($value)
+    {
+        return $this->attributes['first_name'] = strtoupper($value);
+    }
+
+    public function setLastNameAttribute($value)
+    {
+        return $this->attributes['last_name'] = strtoupper($value);
+    }
 }
