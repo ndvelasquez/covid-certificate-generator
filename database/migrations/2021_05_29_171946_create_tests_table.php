@@ -16,6 +16,7 @@ class CreateTestsTable extends Migration
         Schema::create('tests', function (Blueprint $table) {
             $table->id();
             $table->unsignedBigInteger('client_id');
+            $table->enum('test_type', ['antigeno', 'serologica']);
             $table->enum('reference', ['domicilio', 'corporativo']);
             $table->date('test_date');
             $table->time('test_time');
