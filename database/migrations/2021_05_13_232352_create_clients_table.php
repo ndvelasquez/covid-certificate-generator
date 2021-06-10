@@ -17,6 +17,7 @@ class CreateClientsTable extends Migration
             $table->id();
             $table->enum('document_type', ['dni', 'ce', 'pasaporte', 'otros']);
             $table->string('document_number');
+            $table->string('passport')->nullable();
             $table->string('first_name');
             $table->string('last_name');
             $table->date('born_date');

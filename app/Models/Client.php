@@ -12,6 +12,7 @@ class Client extends Model
     protected $fillable = [
         'document_type',
         'document_number',
+        'passport',
         'first_name',
         'last_name',
         'born_date',
