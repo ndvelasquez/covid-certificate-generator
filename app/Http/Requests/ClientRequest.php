@@ -25,8 +25,8 @@ class ClientRequest extends FormRequest
     {
         return [
             'document_type' => 'required',
-            'document_number' => 'required',
-            'passport' => 'nullable',
+            'document_number' => 'required|alpha_num',
+            'passport' => 'nullable|alpha_num',
             'first_name' => 'required',
             'last_name' => 'required',
             'born_date' => 'required',

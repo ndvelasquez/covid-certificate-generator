@@ -2,6 +2,7 @@
 
 namespace App\Models;
 
+use Carbon\Carbon;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
@@ -39,5 +40,10 @@ class Client extends Model
     public function setLastNameAttribute($value)
     {
         return $this->attributes['last_name'] = strtoupper($value);
+    }
+
+    public function getDateOfBirthAttribute()
+    {
+        return  Carbon::parse($this->born_date)->format('d/m/Y');
     }
 }

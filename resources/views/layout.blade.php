@@ -15,7 +15,7 @@
         <div class="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8">
         <div class="relative flex items-center justify-between h-16">
             <div class="absolute inset-y-0 left-0 flex items-center sm:hidden">
-            <!-- Mobile menu button-->
+            <!-- Boton del menu mobile -->
                 <button type="button" class="mobile-menu-button inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white" aria-controls="mobile-menu" aria-expanded="false">
                 <span class="sr-only">Open main menu</span>
                     <svg class="menu-show block h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
@@ -34,9 +34,9 @@
             <div class="hidden sm:block sm:ml-6">
                 <div class="flex space-x-4">
                 
-                <a href="#" class="text-gray-300 hover:text-gray-700 px-3 py-2 rounded-md text-sm font-medium" aria-current="page">Dashboard</a>
+                <a href="{{ route('medical.reports') }}" class="text-gray-300 hover:text-gray-700 px-3 py-2 rounded-md text-sm font-medium" aria-current="page">Dashboard</a>
     
-                <a href="{{ route('clients.index') }}" class="text-gray-300 hover:text-gray-700 px-3 py-2 rounded-md text-sm font-medium">Clientes</a>
+                <a href="{{ route('clients.index') }}" class="text-gray-300 hover:text-gray-700 px-3 py-2 rounded-md text-sm font-medium">Pacientes</a>
     
                 <a href="{{ route('certificates.index') }}" class="text-gray-300 hover:text-gray-700 px-3 py-2 rounded-md text-sm font-medium">Certificados</a>
 
@@ -48,13 +48,13 @@
         </div>
         </div>
     
-        <!-- Mobile menu, show/hide based on menu state. -->
+        <!-- Menu movil, basado en el estado hide/block -->
         <div class="mobile-menu hidden sm:hidden">
             <div class="px-2 pt-2 pb-3 space-y-1">
                 
                 <a href="#" class="text-gray-300 hover:text-gray-700 px-3 py-2 rounded-md text-sm font-medium" aria-current="page">Dashboard</a>
         
-                <a href="{{ route('clients.index') }}" class="text-gray-300 hover:text-gray-700 px-3 py-2 rounded-md text-sm font-medium">Clientes</a>
+                <a href="{{ route('clients.index') }}" class="text-gray-300 hover:text-gray-700 px-3 py-2 rounded-md text-sm font-medium">Pacientes</a>
         
                 <a href="{{ route('certificates.index') }}" class="text-gray-300 hover:text-gray-700 px-3 py-2 rounded-md text-sm font-medium">Certificados</a>
 
@@ -88,7 +88,7 @@
             }
         }
 
-        // grab everything we need
+        // obtengo los elementos del menu
         const btn = document.querySelector("button.mobile-menu-button");
         const menu = document.querySelector(".mobile-menu");
         const menuShow = document.querySelector(".menu-show");

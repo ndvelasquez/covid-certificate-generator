@@ -37,6 +37,6 @@ class TestController extends Controller
             $pdf = PDF::loadView('reports.serologic', compact('test'));
         }
 
-        return $pdf->download(date('Ymd'). '-' .  $test->client->first_name . '-' . $test->client->last_name . '.pdf');
+        return $pdf->stream(date('Ymd'). '-' .  $test->client->first_name . '-' . $test->client->last_name . '.pdf');
     }
 }

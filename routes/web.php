@@ -12,4 +12,4 @@ Route::get('dermanova', [PageController::class, 'dermanova'])->name('dermanova.r
 Route::resource('medical/clients', ClientController::class);
 Route::resource('medical/certificates', TestController::class);
 
-Route::post('medical/certificates/{certificate}/report', [TestController::class, 'generatePdf'])->name('certificates.pdf');
+Route::get('medical/certificates/{test}/report', [TestController::class, 'generatePdf'])->name('certificates.pdf');
