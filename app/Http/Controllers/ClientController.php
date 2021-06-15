@@ -32,7 +32,16 @@ class ClientController extends Controller
         // dd($client);
         Client::create($client);
 
-        return redirect()->route('clients.index');
+        // Valido si la peticion viene por ajax
+        if ($request->ajax()) {
+            return response()->json([
+                'message' => $request->all()
+            ]);
+        }
+        else {
+            return redirect()->route('clients.index');
+        }
+    
     }
 
     public function show(Client $client)

@@ -36,7 +36,7 @@
                     <option value="null">no hay ningun paciente</option>
                 @endforelse
             </select>
-            <!--Open modal button-->
+            <!--Boton para abrir ventana modal-->
             <button id="buttonmodal" type="button">
                 <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-gray-700" viewBox="0 0 20 20" fill="currentColor">
                     <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-11a1 1 0 10-2 0v2H7a1 1 0 100 2h2v2a1 1 0 102 0v-2h2a1 1 0 100-2h-2V7z" clip-rule="evenodd" />
@@ -76,7 +76,8 @@
                             d="M10 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2m7-2a9 9 0 11-18 0 9 9 0 0118 0z" />
                     </svg>
                 </button>
-                <!-- Test content -->
+                <!-- Incluyo formulario de agregar paciente en el modal -->
+                <div id="msg_success" class="bg-green-200 text-green-500 py-3 w-full rounded-md" style="display: none">Paciente agregado correctamente</div>
                 <h2 class="text-lg font-semibold">Agregar nuevo paciente</h2>
                 @include('clients.layouts.client')
             </div>
@@ -84,14 +85,19 @@
 
     </div>
 
-    <script> 
+    <script>
+        /*Capturo los eventos y variables
+        para abrir y cerrar el modal*/
         const button = document.getElementById('buttonmodal')
         const closebutton = document.getElementById('closebutton')
         const modal = document.getElementById('modal')
     
         button.addEventListener('click',()=>modal.classList.add('scale-100'))
         closebutton.addEventListener('click',()=>modal.classList.remove('scale-100'))
+        /*Fin de la captura y ejecucion del modal*/
 
+        /*Consulta a API de Reniec para devolver 
+        Nombres y apellidos de personas con DNI*/
         function findUser(document_number) {
             let documentType = document.getElementById("document_type");
             if (documentType.value == 'dni')
@@ -104,5 +110,39 @@
             });
             }
         }
+        /*Fin de la funcion*/
+
+        /*Envío de formulario modal a controlador*/
+        $(document).ready(function () {
+            $(document).on('submit', '#patient_form', function () {
+                // obtengo los datos del formulario y seteo la ruta
+                var data = $(this).serialize();
+                var route = "http://reportes-covid.test/medical/clients"
+                
+                // realizo la petición por AJAX
+                $.ajax({
+                    url: route,
+                    type: 'POST',
+                    dataType: 'json',
+                    data: data,
+
+                    success: function(data) {
+                        let patientSelect = $("select[name='client_id']");
+                        let patientList = ($("select[name='client_id'] option"));
+                        let latestValue = 0;
+                        for (const patient of patientList) {
+                            if(latestValue < $(patient).val()) {
+                                latestValue = $(patient).val();
+                            }
+                        }
+                        $(patientSelect).append("<option value='"+(Number(latestValue)+1)+"'>"+data.message.first_name+" "+data.message.last_name+"</option>");
+                        $("#msg_success").fadeIn();
+                    }
+                });
+                $(this)[0].reset();
+                return false;
+            });
+        });
+        /*Fin del envio*/
     </script>
 @endsection

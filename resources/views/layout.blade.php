@@ -7,6 +7,9 @@
         {{-- Tailwind CSS --}}
         <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
 
+        {{-- Jquery --}}
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
         <title>Generador de reportes de covid</title>
 
     </head>
