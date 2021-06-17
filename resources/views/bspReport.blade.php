@@ -56,7 +56,7 @@
         <input type="radio" id="positive" name="result" value="Positivo">
         <label for="positive">Positivo</label>
 
-        <input type="submit" class="block border-2 cursor-pointer text-white bg-green-500 hover:bg-green-700 rounded-md my-2 py-2 px-4" value="Generar" onclick="setTimeout(resetForm, 20000)">
+        <input type="submit" class="block border-2 cursor-pointer text-white bg-green-500 hover:bg-green-700 rounded-md my-2 py-2 px-4" value="Generar">
         </form>
     </div>
 @endsection
