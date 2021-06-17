@@ -114,6 +114,7 @@
 
         /*Envío de formulario modal a controlador*/
         $(document).ready(function () {
+            $("#patient_form").removeProp("action");
             $(document).on('submit', '#patient_form', function () {
                 // obtengo los datos del formulario y seteo la ruta
                 var data = $(this).serialize();

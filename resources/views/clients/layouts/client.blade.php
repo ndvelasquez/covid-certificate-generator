@@ -1,4 +1,4 @@
-<form class="max-w-xs" id="patient_form" method="POST">
+<form class="max-w-xs" id="patient_form" action="{{ route('clients.store') }}" method="POST">
     @csrf
     
     <p class="block font-medium text-sm text-gray-700">Tipo de Documento*:</p>

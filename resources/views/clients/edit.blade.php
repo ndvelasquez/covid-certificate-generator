@@ -19,8 +19,9 @@
     @endif
 
     <div class="grid md:grid-cols-2 gap-4">
-        <form class="max-w-xs" action="{{ route('clients.store') }}" method="POST">
+        <form class="max-w-xs" action="{{ route('clients.update', $client->id) }}" method="POST">
         @csrf
+        @method('PUT')
         
         <p class="block font-medium text-sm text-gray-700">Tipo de Documento:</p>
         <select class="form-input w-full rounded-md shadow-sm" id="document_type" onchange="findUser(null)" name="document_type" required>
