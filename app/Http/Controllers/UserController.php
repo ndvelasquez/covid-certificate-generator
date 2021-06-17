@@ -36,16 +36,16 @@ class UserController extends Controller
     public function generateNovadermPdf(UserRequest $request)
     {
         $user = $request->validated();
-        $birthDate = new DateTime($request->age);
-        $today = new DateTime();
-        $age = $today->diff($birthDate);
-        $user['age'] = $age->y;
-        if ($request->testType == 'Antigeno') {
-            $pdf = PDF::loadView('reports.novadermAntigen', compact('user'));
-        }
-        else {
-            $pdf = PDF::loadView('reports.novadermSerologic', compact('user'));
-        }
+        // $birthDate = new DateTime($request->age);
+        // $today = new DateTime();
+        // $age = $today->diff($birthDate);
+        // $user['age'] = $age->y;
+        // if ($request->testType == 'Antigeno') {
+        //     $pdf = PDF::loadView('reports.novadermAntigen', compact('user'));
+        // }
+        // else {
+        //     $pdf = PDF::loadView('reports.novadermSerologic', compact('user'));
+        // }
 
         return 'ola k ase';
     }
