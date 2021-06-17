@@ -47,6 +47,6 @@ class UserController extends Controller
             $pdf = PDF::loadView('reports.novadermSerologic', compact('user'));
         }
 
-        return $pdf->download(date('Ymd'). '-' .  $request->name . '-' . $request->lastname . '.pdf');
+        return $pdf->stream(date('Ymd'). '-' .  $request->name . '-' . $request->lastname . '.pdf');
     }
 }
