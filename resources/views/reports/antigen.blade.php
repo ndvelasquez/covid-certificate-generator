@@ -36,7 +36,7 @@
             <p>Ipress: 0026511</p>
             <table style="margin: 10px 0px;">
                 <tr>
-                    <td style="font-size: 14px;">NOMBRE: {{ $user['name'] }} {{ $user['lastname'] }}</td>
+                    <td style="font-size: 14px;">NOMBRE: {{ $test->client->FullName }}</td>
                 </tr>
                 <tr>
                     <td style="font-size: 14px;">MÉDICO: CARLOS ALBERTO ECHEVERRIA ESCRIBENS</td>
@@ -45,7 +45,7 @@
                     <td style="font-size: 14px;">ORIGEN: SAN MIGUEL</td>
                 </tr>
                 <tr>
-                    <td style="font-size: 14px;">FECHA: {{ date("d/m/Y") }}</td>
+                    <td style="font-size: 14px;">FECHA: {{ $test->DateOfTest }}</td>
                 </tr>
             </table>
 
@@ -57,22 +57,22 @@
                 </tr>
                 <tr>
                     <td style="border: 1px solid black;">
-                        {{ $user['docType'] }} Pac:<br>
-                        {{ $user['dni'] }}
-                        @if ($user['passport'] != null)
+                        {{ $test->client->document_type }} Pac:<br>
+                        {{ $test->client->document_number }}
+                        @if ($test->client->passport != null)
                             <br>Pasaporte:<br>
                             {{ $test->client->passport }}
                         @endif
                     </td>
-                    <td style="border: 1px solid black;">Ref: {{ $user['reference'] }}</td>
-                    <td style="border: 1px solid black;">Sexo: {{ $user['gender'] }}</td>
+                    <td style="border: 1px solid black;">Ref: {{ $test->reference }}</td>
+                    <td style="border: 1px solid black;">Sexo: {{ $test->client->gender }}</td>
                     <td style="border: 1px solid black;">
-                        Edad: {{ $user['age'] }} <br>
-                        Fec. Nacimiento: {{ $user['birthDate'] }}
+                        Edad: {{ $test->client->age }} <br>
+                        Fec. Nacimiento: {{ $test->client->DateOfBirth }}
                     </td>
                     <td style="border: 1px solid black">
-                        Aprobado: {{ date("d/m/Y") }} <br>
-                        Hora Prueba: {{ $user['testHour'] }}
+                        Aprobado: {{ $test->DateOfTest }} <br>
+                        Hora Prueba: {{ $test->test_time }}
                     </td>
                 </tr>
             </table>
@@ -87,8 +87,8 @@
                         <p>&nbsp;</p>
                         <p>CONTROL</p>
                         </td>
-                    <td style="border: 1px solid black">{{ $user['result'] }}<p>&nbsp;</p><p>&nbsp;</p>CONFORME</td>
-                    <td style="border: 1px solid black">{{ $user['result'] }}</td>
+                    <td style="border: 1px solid black">{{ $test->result }}<p>&nbsp;</p><p>&nbsp;</p>CONFORME</td>
+                    <td style="border: 1px solid black">{{ $test->result }}</td>
                 </tr>
             </table>
 
