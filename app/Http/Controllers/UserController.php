@@ -31,23 +31,23 @@ class UserController extends Controller
             $pdf = PDF::loadView('reports.serologic', compact('user'));
         }
 
-        return $pdf->download(date('Ymd'). '-' .  $request->name . '-' . $request->lastname . '.pdf');
+        return $pdf->stream('document.pdf');
     }
 
     public function generateNovadermPdf(UserRequest $request)
     {
         $user = $request->validated();
-        $birthDate = new DateTime($request->age);
-        $today = new DateTime();
-        $age = $today->diff($birthDate);
-        $user['age'] = $age->y;
-        if ($request->testType == 'Antigeno') {
-            $pdf = PDF::loadView('reports.novadermAntigen', compact('user'));
-        }
-        else {
-            $pdf = PDF::loadView('reports.novadermSerologic', compact('user'));
-        }
+        // $birthDate = new DateTime($request->age);
+        // $today = new DateTime();
+        // $age = $today->diff($birthDate);
+        // $user['age'] = $age->y;
+        // if ($request->testType == 'Antigeno') {
+        //     $pdf = PDF::loadView('reports.novadermAntigen', compact('user'));
+        // }
+        // else {
+        //     $pdf = PDF::loadView('reports.novadermSerologic', compact('user'));
+        // }
 
-        return $pdf->download(date('Ymd'). '-' .  $request->name . '-' . $request->lastname . '.pdf');
+        return 'ola k ase';
     }
 }

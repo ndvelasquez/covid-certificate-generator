@@ -52,7 +52,7 @@ return [
     |
     */
 
-    'url' => 'https://frozen-depths-47340.herokuapp.com/',
+    'url' => 'https://cryptic-journey-11900.herokuapp.com/',
 
     'asset_url' => env('ASSET_URL', null),
 
@@ -174,6 +174,8 @@ return [
         // App\Providers\BroadcastServiceProvider::class,
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
+        App\Providers\FortifyServiceProvider::class,
+        App\Providers\JetstreamServiceProvider::class,
         Barryvdh\DomPDF\ServiceProvider::class,
 
     ],
