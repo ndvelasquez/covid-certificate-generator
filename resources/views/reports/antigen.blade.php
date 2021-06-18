@@ -3,9 +3,7 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-
-        {{-- Tailwind CSS --}}
-        <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="{{ asset('css/app.css') }}">
 
         <style>
             * {
@@ -17,9 +15,9 @@
         <title>reporte de toma de prueba covid-19</title>
 
     </head>
-    <body class="bg-cover" style="background-image: url({{ public_path('images/template.png') }})">
+    <body>
         <div class="px-8 mt-20">
-            <img class="w-48 h-16 mb-6" src="{{ public_path('images/minsa.png') }}" alt="">
+            {{-- <img class="w-48 h-16 mb-6" src="{{ public_path('images/minsa.png') }}" alt=""> --}}
             <p class="text-md mb-4 text-semibold text-center uppercase">Certificado toma de prueba covid-19</p>
             <p class="text-sm text-left">Autorizado por: Ministerio de salud del Perú</p>
             <p class="text-xs text-left">Ipress: 0026511</p>

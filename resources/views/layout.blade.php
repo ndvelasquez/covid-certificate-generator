@@ -3,14 +3,12 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-
-        {{-- Tailwind CSS --}}
-        <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="{{ asset('css/app.css') }}">
 
         <title>Generador de reportes de covid</title>
 
     </head>
-    <body class="p-4 max-w-7xl mx-auto sm:px-6 lg:px-8 bg-cover" style="background-image: url({{ asset('/images/form-background.jpg') }})">
+    <body class="p-4 max-w-7xl mx-auto sm:px-6 lg:px-8 bg-blue-400 bg-opacity-60">
         <h1 class="text-lg font-bold">Generar reporte de resultados de la prueba de COVID-19</h1>
         @yield('content')
     </body>
