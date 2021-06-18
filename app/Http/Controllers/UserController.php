@@ -30,7 +30,7 @@ class UserController extends Controller
             $pdf = PDF::loadView('reports.serologic', compact('user'));
         }
 
-        return $pdf->stream('document.pdf');
+        return $pdf->download(date('Ymd') .'-'. $user['name'] .'-'. $user['lastname'] .'.pdf');
     }
 
     public function generateNovadermPdf(UserRequest $request)
