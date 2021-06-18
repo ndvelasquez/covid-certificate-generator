@@ -9,7 +9,7 @@
     </ul>
     @endif
 
-    <div class="grid md:grid-cols-2 gap-4">
+    <div class="">
         <form id="myForm" class="max-w-xs" action="{{ route('bspReports.pdf') }}" method="POST">
         @csrf
         <p class="block font-medium text-sm text-gray-700">Tipo de prueba:</p>
