@@ -106,7 +106,7 @@
             <p class="my-8">&nbsp;</p>
 
             <p><img src="{{ public_path('images/sign.png') }}" alt=""></p>
-            <p class="text-xs">Dr. CARLOS ECHEVERRIA ESCRIBENS <br> C.M.P 27834 - R.N.E. 16271</p>
+            <p class="text-xs">Dr. CARLOS ECHEVARRIA ESCRIBENS <br> C.M.P 27834 - R.N.E. 16271</p>
         </div>
     </body>
 </html>

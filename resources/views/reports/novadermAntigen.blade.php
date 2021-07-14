@@ -25,7 +25,7 @@
                     <td>NOMBRE: {{ $user['name'] }} {{ $user['lastname'] }}</td>
                 </tr>
                 <tr>
-                    <td>MÉDICO: CARLOS ALBERTO ECHEVERRIA ESCRIBENS</td>
+                    <td>MÉDICO: CARLOS ALBERTO ECHEVARRIA ESCRIBENS</td>
                 </tr>
                 <tr>
                     <td>ORIGEN: SAN MIGUEL</td>

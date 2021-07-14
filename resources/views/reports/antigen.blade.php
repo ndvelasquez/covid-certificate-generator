@@ -39,7 +39,7 @@
                     <td style="font-size: 14px;">NOMBRE: {{ $user['name'] }} {{ $user['lastname'] }}</td>
                 </tr>
                 <tr>
-                    <td style="font-size: 14px;">MÉDICO: CARLOS ALBERTO ECHEVERRIA ESCRIBENS</td>
+                    <td style="font-size: 14px;">MÉDICO: CARLOS ALBERTO ECHEVARRIA ESCRIBENS</td>
                 </tr>
                 <tr>
                     <td style="font-size: 14px;">ORIGEN: SAN MIGUEL</td>
