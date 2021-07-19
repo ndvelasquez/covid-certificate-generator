@@ -32,6 +32,7 @@ class UserRequest extends FormRequest
             'gender' => 'required',
             'reference' => 'required',
             'result' => 'required',
+            'testDate' => 'required',
             'testHour' => 'required',
             'docType' => 'required'
         ];

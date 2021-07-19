@@ -34,7 +34,7 @@
             <table style="margin: 10px 0px; width: 100%">
                 <tr>
                     <td>PACIENTE: {{ $user['name'] }} {{ $user['lastname'] }}</td>
-                    <td style="text-align: right;"><strong>FECHA:</strong> {{ date("d/m/Y") }}</td>
+                    <td style="text-align: right;"><strong>FECHA:</strong> {{ $user['testDate'] }}</td>
                 </tr>
                 <tr>
                     <td>

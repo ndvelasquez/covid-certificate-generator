@@ -22,6 +22,7 @@ class UserController extends Controller
         $user['age'] = $age->y;
         /**Fin de calculo de edad */
         $user['birthDate'] = Carbon::parse($user['birthDate'])->format('d/m/Y'); //parseo de la fecha a formato español
+        $user['testDate'] = Carbon::parse($user['testDate'])->format('d/m/Y'); //parseo de la fecha a formato español
         // dd($user);
         if ($request->testType == 'Antigeno') {
             $pdf = PDF::loadView('reports.antigen', compact('user'));
