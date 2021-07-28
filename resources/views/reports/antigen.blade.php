@@ -99,7 +99,7 @@
             <p style="margin-bottom: 15px;">&nbsp;</p>
 
             <p><img src="{{ public_path('images/sign.png') }}" alt=""></p>
-            <p class="text-xs">Dr. CARLOS ECHEVERRIA ESCRIBENS <br> C.M.P 27834</p>
+            <p class="text-xs">Dr. CARLOS ECHEVARRIA ESCRIBENS <br> C.M.P 27834</p>
         </div>
     </body>
 </html>
