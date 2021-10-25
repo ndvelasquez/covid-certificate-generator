@@ -16,7 +16,7 @@
                     <img class="w-48 h-16 transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-110" src="{{ asset('/images/logo-dermanova.png') }}" alt="imagen de logo de dermanova">
                 </a>
                 <a href="{{ route('medical.reports') }}">
-                    <img class="w-48 h-16 transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-110" src="{{ asset('/images/bsp-logo.jpeg') }}" alt="imagen de logo de bsp">
+                    <img class="w-48 h-16 transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-110" src="{{ asset('/images/bsp-logo.png') }}" alt="imagen de logo de bsp">
                 </a>
             </div>
         </div>
